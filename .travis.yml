@@ -3,10 +3,10 @@ services:
   - docker
 
  after_success:
-  - docker build -t ravindra88/product-service -f Dockerfile ./product-service
-  - docker build -t ravindra88/order-service -f Dockerfile ./order-servic
-  - docker build -t ravindra88/api-gateway -f Dockerfile ./api-gateway
-  - docker build -t ravindra88/discovery-server -f Dockerfile ./discovery-server
+  - docker build -t ravindra88/product-service -f ./product-service/Dockerfile ./product-service
+  - docker build -t ravindra88/order-service -f ./order-serviceDockerfile ./order-service
+  - docker build -t ravindra88/api-gateway -f ./api-gatewayDockerfile ./api-gateway
+  - docker build -t ravindra88/discovery-server -f ./discovery-serverDockerfile ./discovery-server
   # Log in to the docker CLI to
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
