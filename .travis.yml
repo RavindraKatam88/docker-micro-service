@@ -1,6 +1,9 @@
-sudo: required
+language: java
+sudo: false
 services:
   - docker
+
+script: "mvn test"
 
  after_success:
   - docker build -t ravindra88/product-service -f ./product-service/Dockerfile ./product-service
