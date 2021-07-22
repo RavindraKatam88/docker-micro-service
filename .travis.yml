@@ -5,7 +5,7 @@ services:
 
 script: "mvn test"
 
- after_success:
+after_success:
   - docker build -t ravindra88/product-service -f ./product-service/Dockerfile ./product-service
   - docker build -t ravindra88/order-service -f ./order-serviceDockerfile ./order-service
   - docker build -t ravindra88/api-gateway -f ./api-gatewayDockerfile ./api-gateway
