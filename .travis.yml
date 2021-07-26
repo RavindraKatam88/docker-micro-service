@@ -18,6 +18,7 @@ after_success:
   - docker push ravindra88/api-gateway
   - docker push ravindra88/discovery-server
 deploy:
+  skip_cleanup: true
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-micro-service"
@@ -29,4 +30,3 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: "$AWS_SECURE_KEY"
-    
