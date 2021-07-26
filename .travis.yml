@@ -21,8 +21,8 @@ deploy:
   skip_cleanup: true
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "docker-micro-service"
-  env: "Dockermicroservice-env"
+  app: "docker-micro-service1"
+  env: "Dockermicroservice1-env"
   bucket_name: "elasticbeanstalk-us-east-2-381128197141"
   bucket_path: "docker-micro-service"
   on:
