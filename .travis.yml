@@ -17,3 +17,15 @@ after_success:
   - docker push ravindra88/order-service
   - docker push ravindra88/api-gateway
   - docker push ravindra88/discovery-server
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-micro-service"
+  env: "Dockermicroservice-env"
+  bucket_name: "elasticbeanstalk-us-east-2-381128197141"
+  bucket_path: "docker-micro-service"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECURE_KEY"
