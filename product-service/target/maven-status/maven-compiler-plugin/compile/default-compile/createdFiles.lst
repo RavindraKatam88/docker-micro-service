@@ -1,6 +1,0 @@
-com\practice\ProductService\ProductServiceApplication.class
-com\practice\repository\ProductRepository.class
-com\practice\entity\Product.class
-com\practice\service\impl\ProductServiceImpl.class
-com\practice\controllers\ProductController.class
-com\practice\service\ProductService.class

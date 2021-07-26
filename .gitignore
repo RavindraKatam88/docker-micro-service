@@ -11,7 +11,10 @@ hs_err_pid*
 ##############################
 ## Maven
 ##############################
-target/
+/target/
+*/target/**
+**/META-INF/
+!.mvn/wrapper/maven-wrapper.jar
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
