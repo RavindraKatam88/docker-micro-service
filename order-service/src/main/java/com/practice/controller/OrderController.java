@@ -17,5 +17,10 @@ public class OrderController {
 	public Product getProduct(){
 		return proxy.getProduct();
 	}
+	
+	@GetMapping("/")
+	public String getPing(){
+		return "ping";
+	}
 
 }
