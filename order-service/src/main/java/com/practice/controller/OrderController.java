@@ -1,21 +1,22 @@
 package com.practice.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.practice.dto.Product;
-import com.practice.proxy.ProductProxy;
 
 @RestController
 public class OrderController {
 	
-	@Autowired
-	private ProductProxy proxy;
+	//@Autowired
+	//private ProductProxy proxy;
 	
 	@GetMapping("/product-details")
 	public Product getProduct(){
-		return proxy.getProduct();
+		//return proxy.getProduct();
+		Product product= new Product();
+		product.setProductName("sample");
+		return product;
 	}
 	
 	@GetMapping("/")
