@@ -35,7 +35,7 @@ service:
   networks:
    -spring-cloud-network
  api-gateway:
-  container_name:api-gateway
+  container_name: sapi-gateway
   build:
    context: api-gateway
    dockerfile: Dockerfile
