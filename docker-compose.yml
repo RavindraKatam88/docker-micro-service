@@ -3,7 +3,7 @@ service:
  product-service:
   container_name: product-service
   build:
-   context: product-service
+   context: /product-service
    dockerfile: Dockerfile
   image: product-service:latest
   ports:
@@ -15,7 +15,7 @@ service:
  order-service:
   container_name: order-service
   build:
-   context: order-service
+   context: /order-service
    dockerfile: Dockerfile
   image: order-service:latest
   ports:
@@ -27,7 +27,7 @@ service:
  discovery-server:
   container_name: discover-server
   build:
-   context: discovery-server
+   context: /discovery-server
    dockerfile: Dockerfile
   image: discovery-server:latest
   ports:
@@ -37,7 +37,7 @@ service:
  api-gateway:
   container_name: sapi-gateway
   build:
-   context: api-gateway
+   context: /api-gateway
    dockerfile: Dockerfile
   image: api-gatewat:latest
   ports:
