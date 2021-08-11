@@ -1,35 +1,35 @@
-version: '3.4'
-service:
+version: '3.8'
+services:
   product-service:
     container_name: product-service
     image: ravindra88/product-service
     ports:
-      -8182:8182
+      - "8182:8182"
     depends_on:
-      -discovery-server 
+      - discovery-server 
     networks:
-      -spring-cloud-network
+      - spring-cloud-network
   order-service:
     container_name: order-service
     image: ravindra88/order-service
     ports:
-      -8283:8283
+      - "8283:8283"
     depends_on:
-      -discovery-server 
-    netowkrs:
-      -spring-cloud-network   
+      - discovery-server 
+    networks:
+      - spring-cloud-network   
   discovery-server:
     container_name: discover-server
     image: ravindra88/discover-server
     ports:
-      -8761:8761
+      - "8761:8761"
     networks:
-      -spring-cloud-network
+      - spring-cloud-network
   api-gateway:
     container_name: api-gateway
     image: ravindra88/api-gateway
     ports:
-      -8485:8485 
-netowkrs:
+      - "8485:8485" 
+networks:
   spring-cloud-network:
     driver: bridge     
