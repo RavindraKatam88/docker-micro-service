@@ -5,8 +5,6 @@ services:
     image: ravindra88/order-service
     ports:
       - "8283:8283"
-    depends_on:
-      - discovery-server 
     networks:
       - spring-cloud-network   
 networks:
