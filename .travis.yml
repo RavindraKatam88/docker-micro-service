@@ -6,17 +6,17 @@ services:
 script: "mvn test"
 
 after_success:
-  - docker build -t ravindra88/product-service -f ./product-service/Dockerfile ./product-service
+  #- docker build -t ravindra88/product-service -f ./product-service/Dockerfile ./product-service
   - docker build -t ravindra88/order-service -f ./order-service/Dockerfile ./order-service
-  - docker build -t ravindra88/api-gateway -f ./api-gateway/Dockerfile ./api-gateway
-  - docker build -t ravindra88/discovery-server -f ./discovery-server/Dockerfile ./discovery-server
+  #- docker build -t ravindra88/api-gateway -f ./api-gateway/Dockerfile ./api-gateway
+  #- docker build -t ravindra88/discovery-server -f ./discovery-server/Dockerfile ./discovery-server
   # Log in to the docker CLI to
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push ravindra88/product-service
+  #- docker push ravindra88/product-service
   - docker push ravindra88/order-service
-  - docker push ravindra88/api-gateway
-  - docker push ravindra88/discovery-server
+  #- docker push ravindra88/api-gateway
+  #- docker push ravindra88/discovery-server
 deploy:
   skip_cleanup: true
   provider: elasticbeanstalk
