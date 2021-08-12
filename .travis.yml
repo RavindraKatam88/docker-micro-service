@@ -22,9 +22,9 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-micro-services1"
-  env: "Dockermicroservices-env1"
+  env: "Dockermicroservices1-env"
   bucket_name: "elasticbeanstalk-us-east-2-381128197141"
-  bucket_path: "docker-micro-service1"
+  bucket_path: "docker-micro-service"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
