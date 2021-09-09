@@ -32,7 +32,8 @@ public class OrderController {
 	public List<Product> getProducts() {
 		Product product = Product.builder().productId(1).productName("iPhone").quantity(10).build();
 		Product product1 = Product.builder().productId(1).productName("iPhone").quantity(10).build();
-		return Arrays.asList(product, product1);
+		Product product2 = Product.builder().productId(1).productName("samsung").quantity(12).build();
+		return Arrays.asList(product, product1, product2);
 	}
 
 }
