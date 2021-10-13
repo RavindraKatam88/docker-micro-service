@@ -22,7 +22,7 @@ public class OrderController {
 		dataMap.put(1, Product.builder().productId(1).productName("iPhone").quantity(10).build());
 		dataMap.put(2, Product.builder().productId(2).productName("one plus").quantity(5).build());
 		dataMap.put(3, Product.builder().productId(3).productName("samsung").quantity(12).build());
-		dataMap.put(3, Product.builder().productId(3).productName("oppo").quantity(12).build());
+		dataMap.put(4, Product.builder().productId(4).productName("oppo").quantity(12).build());
 	}
 
 	/*@Autowired
